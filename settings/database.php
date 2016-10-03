@@ -6,7 +6,7 @@ use LegionLab\Troubadour\Persistence\DefaultModel;
 $table = new Migration();
 
 $table
-    ->database('troubador_example')
+    ->database('troubadour_example')
     ->name('authors')
     ->column('id','int', 11, false)
     ->pk('id')
