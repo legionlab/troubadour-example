@@ -1,0 +1,18 @@
+[use \LegionLab\Utils]
+[use \LegionLab\Troubadour\Collections]
+
+[- header -]
+[- scripts -]
+
+<section class="body" >
+
+    [+ settings/skeleton/default/menu.urban +]
+
+    <article class="col-md-9 right-side" style=" overflow-y: auto" >
+        <hr>
+        <div class="container-fluid">
+            [+ content +]
+        </div>
+    </article>
+
+</section>

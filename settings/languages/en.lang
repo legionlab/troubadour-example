@@ -1,0 +1,46 @@
+[global]
+
+    foot = "Produced by Leonardo Vilarinho";
+
+    edit = "Edit";
+    delete = "Delete";
+
+    of = "of";
+
+
+[book]
+    title = "Books";
+    t-home = "books";
+    t-create = "Let's create a book?";
+    t-edit = "Edit?"
+
+    b-create = "Create a book";
+    b-edit = "Edit this book";
+
+    name = "name";
+    price = "Price";
+    author = "author";
+
+    e-id = "error in the book ID";
+    e-name = "name must be between 3 and 100 characters";
+    e-price = "price should be composed of numbers and point";
+    e-author = "author selects is invalid";
+
+[author]
+    title = "Authors";
+    t-home = "list of authors";
+    t-create = "Let's create an author?";
+    t-edit = "Edit?";
+
+    b-create = "Create an author";
+    b-edit = "Edit this author";
+
+    name = "name";
+    age = "Age";
+    years = "years";
+
+    e-id = "error in the author's ID";
+    e-name = "name must be between 3 and 100 characters";
+    e-age = "Age may have up to 3 digits";
+    e-create = "error creating author";
+    e-edit = "error when editing author";

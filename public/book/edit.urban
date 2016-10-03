@@ -1,0 +1,38 @@
+<div class="row">
+    <form action="#" method="post">
+        <input name="token" value="[@ Session::get('token') @]" type="hidden"/>
+        <input name="id" value="[@ Session::get('token') @]" type="hidden"/>
+        <div class="row">
+            <div class="col-md-8">
+                <label>[@ Language::get('book', 'name') @]</label>
+                <input required value="[@ Saved::get('name') @]" name="name" type="text" class="form-control"/>
+            </div>
+
+            <div class="col-md-4">
+                <label>[@ Language::get('book', 'price') @]</label>
+                <input required value="[@ Saved::get('price') @]" name="price" type="text" class="form-control"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <label>[@ Language::get('book', 'author') @]</label>
+                <select name="author" multiple required class="form-control">
+                    [each authors as author]
+                        [if author.id == Saved::get('author') ]
+                            <option value="[- author.id -]" selected>[- author.name -]</option>
+                        [!if]
+                            <option value="[- author.id -]">[- author.name -]</option>
+                        [/if]
+                    [/each]
+                </select>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-center">
+            <button type="submit" class="btn btn-sm btn-danger">
+                <i class="fa fa-plus"></i>
+                [@ Language::get('book', 'b-create') @]
+            </button>
+        </div>
+    </form>
+</div>

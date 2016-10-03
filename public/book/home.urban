@@ -1,0 +1,37 @@
+<div class="row">
+    <a href="[- domain -]/book/create" class="btn btn-sm btn-danger">
+        [@ \Llab\Utils\Language::get('book', 'b-create') @]
+    </a>
+</div>
+
+
+<hr>
+
+<div class="row">
+    [each books as book]
+    <div class="col-md-4 col-sm-6">
+        <div class="thumbnail text-center" style="color: #fff">
+            <div style="width: 100%; height: 100%; background-color: #e74c3c">
+                <div class="row">
+                    <div class="col-md-3">
+                        <span style="font-size: 50pt">[@ substr(book.name, 0, 1) @]</span>
+                        <h4>R$ [- book.price -]</h4>
+                    </div>
+
+                    <div class="col-md-9">
+                        <p>[- book.name -]</p>
+                        <p>[@ Language::get('global', 'of') @] <i>[- book.author.name -]</i></p>
+                        <a href="[- domain -]/book/edit/[- book.id -]" class="btn btn-danger">
+                            [@ Language::get('global', 'edit') @]
+                        </a>
+                        <a href="[- domain -]/book/delete/[- book.id -]" class="btn btn-danger">
+                            [@ Language::get('global', 'delete') @]
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    [/each]
+</div>

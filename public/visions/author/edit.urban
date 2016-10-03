@@ -1,0 +1,25 @@
+<div class="row">
+    <form action="#" method="post">
+        <input name="token" value="[@ Session::get('token') @]" type="hidden"/>
+
+
+        <div class="row">
+            <div class="col-md-8">
+                <label>[@ Language::get('author', 'name') @]</label>
+                <input value="[@ Saved::get('name') @]" name="name" type="text" class="form-control"/>
+            </div>
+
+            <div class="col-md-4">
+                <label>[@ Language::get('author', 'age') @]</label>
+                <input value="[@ Saved::get('age') @]" name="age" type="text" class="form-control"/>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-center">
+            <button type="submit" class="btn btn-sm btn-danger">
+                <i class="fa fa-pencil"></i>
+                [@ Language::get('author', 'b-edit') @]
+            </button>
+        </div>
+    </form>
+</div>

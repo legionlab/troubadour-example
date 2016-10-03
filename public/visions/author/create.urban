@@ -1,0 +1,33 @@
+<div class="row">
+    <form action="#" method="post">
+        <input name="token" value="[@ Session::get('token') @]" type="hidden"/>
+        [? method == 'edit']
+            <input name="id" value="[@ Saved::get('id') @]" type="hidden"/>
+        [/?]
+        <div class="row">
+            <div class="col-md-8">
+                <label>[@ Language::get('author', 'name') @]</label>
+                <input value="[@ Saved::get('name') @]" name="name" type="text" class="form-control"/>
+            </div>
+
+            <div class="col-md-4">
+                <label>[@ Language::get('author', 'age') @]</label>
+                <input value="[@ Saved::get('age') @]" name="age" type="text" class="form-control"/>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-center">
+            [if method == 'create']
+                <button type="submit" class="btn btn-sm btn-danger">
+                    <i class="fa fa-plus"></i>
+                    [@ Language::get('author', 'b-create') @]
+                </button>
+            [!if]
+                <button type="submit" class="btn btn-sm btn-danger">
+                    <i class="fa fa-pencil"></i>
+                    [@ Language::get('author', 'b-edit') @]
+                </button>
+            [/if]
+        </div>
+    </form>
+</div>
