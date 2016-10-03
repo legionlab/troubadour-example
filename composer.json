@@ -1,6 +1,6 @@
 {
-    "name": "legionlab/troubadour",
-    "description": "Troubadour PHP Framework",
+    "name": "legionlab/troubadour-example",
+    "description": "Troubadour PHP Framework CRUD Example",
     "type": "framework",
     "require": {
         "legionlab/troubadour-kernel": "^1.7",
