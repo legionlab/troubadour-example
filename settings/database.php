@@ -1,25 +1,27 @@
 <?php
 
 use LegionLab\Troubadour\Persistence\Migration;
-use LegionLab\Troubadour\Persistence\DefaultModel;
+use LegionLab\Troubadour\Collections\Settings;
 
 $table = new Migration();
 
 $table
-    ->database('troubadour_example')
+    ->database(Settings::get('default_dbname'))
     ->name('authors')
     ->column('id','int', 11, false)
     ->pk('id')
+	->autoincrement('id')
     ->column('name', 'varchar', 50, false)
     ->column('age', 'int', 3)
     ->make();
 
 $table
     ->clear()
-    ->database('troubadour_example')
+    ->database(Settings::get('default_dbname'))
     ->name('books')
     ->column('id','int', 11, false)
     ->pk('id')
+	->autoincrement('id')
     ->column('name', 'varchar', 50, false)
     ->column('price', 'double', 0)
     ->column('author', 'int', 11, false)
