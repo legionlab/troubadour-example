@@ -14,5 +14,7 @@ use LegionLab\Troubadour\Routes\Alias;
 * Alias::set('Account', 'list', 'c'); | The method listDeed of AccountController can be accessed by 'c'
 */
 
+Alias::set('Error', 'fail', 'error');
+
 Alias::set('Author', 'home', 'authors');
 Alias::set('Book', 'home', 'books');
